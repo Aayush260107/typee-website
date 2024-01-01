@@ -1,7 +1,5 @@
 from typing import List, Optional
 
-import pip._internal.utils.inject_securetransport  # noqa
-
 
 def main(args=None):
     # type: (Optional[List[str]]) -> int
