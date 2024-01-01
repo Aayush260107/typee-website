@@ -1,0 +1,99 @@
+.correct {
+  color: #61C766;
+}
+
+.incorrect {
+  color: #FF6B6B;
+}
+
+.typee-logo {
+  top: 10px;
+  left: 5px;
+  width: 270px;
+  
+}
+
+.centered-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+#typedText {
+    
+    position: absolute;
+    z-index: 2;
+
+    left: 12px;
+    top: 155px;
+    margin: auto;
+    width: 100%;
+    padding: 10px; 
+    font-size: 0.3in;
+    font-family: monospace;   
+  }
+  
+#sentenceToType {
+    /* text-align: center; */
+    position: relative;
+    z-index: 1;
+    left: 12px;
+    top: -48px;
+    margin: 50px;
+    width: 100%;
+    padding: 10px;
+    font-size: 0.3in;
+    font-family: monospace; 
+    color: white;
+
+}
+
+.retry-button {
+  margin-top: 16px;
+  
+}
+
+.placeholder {
+  position: absolute;
+  left: 50px;
+  top: 3px;
+  right: 50px;
+  content: attr(data-value);
+  pointer-events: none;
+  opacity: 0.6;
+  text-align: left;
+  z-index: 1;
+  color: grey;
+  font-size: 0.2in;
+  font-family: monospace;
+}
+
+body {
+  background-color: #334559;
+}
+
+.text-white {
+  color: white;
+}
+
+.body-font {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, sans-serif;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+
+.mt-4{
+  color: white;
+  font-family: monospace;
+  font-size: 20px;
+  left: 20px;
+
+
+}

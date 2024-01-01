@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="https://i.postimg.cc/1zHQQdGK/favicon.png">
+    <title>Typee</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/main.css') }}">
+    <style>
+        @font-face {
+            font-family: myFont;
+            src: url("{{url_for('static', filename='styles/RobotoMono-VariableFont_wght.ttf')}}");
+        }
+    </style>
+</head>
+<body style="background-color:#334559">
+
+    <header class="text-white body-font">
+    
+    <img src="https://i.postimg.cc/qBD7PNw5/Screenshot-2023-02-17-at-10-18-45-PM.png" class="typee-logo" width="270px">
+   
+    </header>
+    
+    <br>
+    <br>
+    <div class="centered-container">
+    <div id="sentenceToType"></div>
+    <div class="typed-text" id="typedText"></div>
+    <textarea id="typed" class="w-full px-4 py-2" placeholder="Type here to start the test..." rows="2" cols="2"  style="background: none; border: none; outline: none; height: 20; font-size: 0.2in;"></textarea>
+    <div id="wpm" class="mt-4"></div>
+    <div id="time" class="mt-2"></div>
+    <div class="container" style="  height: 100px;
+    position: relative; left: -25px;"
+    >
+    
+    <div id="resetButton" class="retry-button" style=" margin: 0;
+    
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);">
+    
+    <button type="submit">
+    
+    <img src="https://i.postimg.cc/qR23SGbt/pngtree-white-refresh-icon-image-1338657-removebg-preview.png" height="50" width="50" />
+    
+    </button>
+    </div>
+    </div>
+    <br>
+    <br>
+    
+    <footer class="text-white body-font">
+    
+    <div class="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
+    
+    <p class="text-sm text-white sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0 mt-4">
+    
+    © 2024 TYPEE —
+    
+    <a href="https://www.twitter.com/aayush_2608/" class="text-grey-400 ml-1" rel="noopener noreferrer" target="_blank"
+    
+    style="font-family: monospace; bottom: 10;">Aayush Choudhary |</a>
+    
+    <a href="https://www.instagram.com/jain_akshatt/" class="text-grey-400 ml-1" rel="noopener noreferrer"
+    
+    target="_blank" style="font-family: monospace;">Akshat Jain</a>
+    
+    </p>
+    
+    <span class="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
+    
+    <a class="text-white"></a>
+    
+    <a class="ml-3 text-white"></a>
+    
+    </span>
+    
+    </div>
+    
+    </footer>
+    <script src="{{ url_for('static', filename='scripts/main.js') }}"></script>
+</body>
+</html>
