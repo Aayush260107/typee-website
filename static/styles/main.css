@@ -1,9 +1,9 @@
 .correct {
-  color: #61C766;
+  color: hsl(156, 100%, 52%);
 }
 
 .incorrect {
-  color: #FF6B6B;
+  color: #ff5c5c;
 }
 
 .typee-logo {
@@ -24,50 +24,57 @@
 #typedText {
     
     position: absolute;
-    z-index: 2;
-
+    z-index: 3;
     left: 12px;
-    top: 155px;
+    top: 184px;
     margin: auto;
     width: 100%;
     padding: 10px; 
     font-size: 0.3in;
     font-family: monospace;   
+    padding-left: 30px;
+    padding-right: 30px;
   }
   
 #sentenceToType {
     /* text-align: center; */
-    position: relative;
+    position: absolute;
     z-index: 1;
     left: 12px;
-    top: -48px;
-    margin: 50px;
+    top: 184px;
+    margin: auto;
     width: 100%;
     padding: 10px;
     font-size: 0.3in;
     font-family: monospace; 
     color: white;
+    opacity: 0.3;
+    padding-left: 30px;
+    padding-right: 30px;
 
 }
+.typed{
+  /* text-align: center; */
+  position: absolute;
+  z-index: 2;
+  left: 12px;
+  top: 184px;
+  margin: auto;
+  width: 100%;
+  padding: 10px;
+  font-size: 0.3in;
+  font-family: monospace; 
+  color: white;
+  padding-left: 30px;
+  padding-right: 30px;
+  height: 195px;
+
+}
+
 
 .retry-button {
-  margin-top: 16px;
+  top: 350px;
   
-}
-
-.placeholder {
-  position: absolute;
-  left: 50px;
-  top: 3px;
-  right: 50px;
-  content: attr(data-value);
-  pointer-events: none;
-  opacity: 0.6;
-  text-align: left;
-  z-index: 1;
-  color: grey;
-  font-size: 0.2in;
-  font-family: monospace;
 }
 
 body {
@@ -92,8 +99,23 @@ body {
 .mt-4{
   color: white;
   font-family: monospace;
-  font-size: 20px;
+  font-size: 25px;
   left: 20px;
 
 
+}
+
+.mt-2{
+  color: white;
+  font-family: monospace;
+  font-size: 25px;
+  left: 20px;
+
+
+}
+
+
+.footer{
+  top: 380px;
+  left: 18px;
 }
