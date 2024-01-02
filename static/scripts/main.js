@@ -33,34 +33,56 @@ function displaySentence() {
  
 }
 
+
+
 // Function to start the typing test
 function startTest() {
-  displaySentence();
-  document.getElementById("typed").value = "";
+  // Only change the sentence if the input field is focused
+  const inputField = document.getElementById("typed");
+  if (!inputField.matches(":focus")) {
+    displaySentence();
+  }
+
+  inputField.value = "";
   document.getElementById("typedText").textContent = "";
+
+  let timerSeconds = 30;
+  document.getElementById("timer").textContent = `Time: ${timerSeconds}s`;
+
   currentSentenceIndex = 0;
   typedCharacters = 0;
   correctCharacters = 0;
-  startTime = new Date().getTime();
-  endTime = startTime + 60000; // 60 seconds interval
+  startTime = null;
+  endTime = null;
 
-  // Update timer and check end condition every second
-  timerInterval = setInterval(() => {
-    const currentTime = new Date().getTime();
-    const remainingTime = Math.max(0, endTime - currentTime);
-    const seconds = Math.ceil(remainingTime / 1000);
-    document.getElementById("timer").textContent = `Time: ${seconds}s`;
+  const startTimer = () => {
+    if (startTime === null) {
+      startTime = new Date().getTime();
+      endTime = startTime + 30000; // 30 seconds interval
 
-    if (remainingTime <= 0) {
-      clearInterval(timerInterval);
-      endTest();
+      // Update timer and check end condition every second
+      timerInterval = setInterval(() => {
+        const currentTime = new Date().getTime();
+        const remainingTime = Math.max(0, endTime - currentTime);
+        const seconds = Math.ceil(remainingTime / 1000);
+        document.getElementById("timer").textContent = `Time: ${seconds}s`;
+
+        if (remainingTime <= 0) {
+          clearInterval(timerInterval);
+          endTest();
+        }
+      }, 1000);
     }
-  }, 1000);
+  };
 
-  document.getElementById("typed").disabled = false;
-  document.getElementById("typed").focus();
+  // Start the timer when the user starts typing
+  inputField.addEventListener("input", startTimer);
 
+  inputField.disabled = false;
+  inputField.focus();
 }
+
+
 
 // Function to end the typing test
 function endTest() {
