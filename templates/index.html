@@ -16,22 +16,46 @@
 
     <header class="text-white body-font">
     
-    <img src="https://i.postimg.cc/qBD7PNw5/Screenshot-2023-02-17-at-10-18-45-PM.png" class="typee-logo" width="270px">
+  <img src="https://i.postimg.cc/qBD7PNw5/Screenshot-2023-02-17-at-10-18-45-PM.png" class="typee-logo" width="270px">
    
     </header>
     
     <br>
     <br>
     <div class="centered-container">
-    <div id="sentenceToType"></div>
-    <div class="typed-text" id="typedText"></div>
-    <textarea id="typed" class="w-full px-4 py-2" placeholder="Type here to start the test..." rows="2" cols="2"  style="background: none; border: none; outline: none; height: 20; font-size: 0.2in;"></textarea>
+    <div id="sentenceToType" style="z-index: 1;"></div>
+    <textarea id="typed" class="w-full px-4 py-2"  rows="2" cols="2"  style="background: none; border: none; outline: none; height: 20; font-size: 0.2in;   position: absolute;
+    z-index: 2;
+    left: 12px;
+    top: 184px;
+    margin: auto;
+    width: 100%;
+    padding: 10px;
+    font-size: 0.3in;
+    font-family: monospace; 
+    color: white;
+    padding-left: 30px;
+    padding-right: 30px;
+    height: 195px;"></textarea>
+
+
+     <div class="typed-text" id="typedText" style="z-index: 3;"></div>
+     <br>
+     <br>
+     <br>
+     <br>
+     <br>
     <div id="wpm" class="mt-4"></div>
-    <div id="time" class="mt-2"></div>
+    <div id="timer" class="mt-2"></div>
+    <br>
+    <br>
+  
+    
     <div class="container" style="  height: 100px;
     position: relative; left: -25px;"
     >
-    
+   
+
     <div id="resetButton" class="retry-button" style=" margin: 0;
     
     position: absolute;
@@ -42,7 +66,7 @@
     
     <button type="submit">
     
-    <img src="https://i.postimg.cc/qR23SGbt/pngtree-white-refresh-icon-image-1338657-removebg-preview.png" height="50" width="50" />
+    <img src="https://i.postimg.cc/qR23SGbt/pngtree-white-refresh-icon-image-1338657-removebg-preview.png" height="50" width="50"  />
     
     </button>
     </div>
@@ -51,27 +75,17 @@
     <br>
     
     <footer class="text-white body-font">
-    
-    <div class="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
-    
     <p class="text-sm text-white sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0 mt-4">
-    
     © 2024 TYPEE —
-    
     <a href="https://www.twitter.com/aayush_2608/" class="text-grey-400 ml-1" rel="noopener noreferrer" target="_blank"
-    
-    style="font-family: monospace; bottom: 10;">Aayush Choudhary |</a>
-    
+    style="font-family: monospace ;">Aayush Choudhary |</a>
     <a href="https://www.instagram.com/jain_akshatt/" class="text-grey-400 ml-1" rel="noopener noreferrer"
-    
     target="_blank" style="font-family: monospace;">Akshat Jain</a>
-    
     </p>
     
     <span class="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
     
     <a class="text-white"></a>
-    
     <a class="ml-3 text-white"></a>
     
     </span>
@@ -79,13 +93,13 @@
     </div>
     
     </footer>
-    <script src="{{ url_for('static', filename='scripts/main.js') }}"></script>
-    <script>
-  window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
-    </script>
+<script src="{{ url_for('static', filename='scripts/main.js') }}"></script>
+<script>
+    window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+</script>
 <script defer src="/_vercel/insights/script.js"></script>
 <script>
-  window.si = window.si || function () { (window.siq = window.siq || []).push(arguments); };
+    window.si = window.si || function () { (window.siq = window.siq || []).push(arguments); };
 </script>
 <script defer src="/_vercel/speed-insights/script.js"></script>
 </body>
